@@ -6,8 +6,12 @@ import SoundQualityCard from "./SoundQualityCard";
 
 function Dashboard() {
   return (
-    
-    <Grid container spacing={2} justifyContent="center" style={{ marginTop: "16px" }}>
+    <Grid
+      container
+      spacing={2}
+      justifyContent="center"
+      style={{ marginTop: "16px" }}
+    >
       <Grid item>
         <OnlineModeCard />
       </Grid>
