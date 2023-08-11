@@ -17,6 +17,7 @@ function OnlineModeCard() {
         <Typography variant="h5" component="div">
           Online Mode
         </Typography>
+        <br></br>
         <Typography variant="body2">Is this application connected</Typography>
         <Typography variant="body2">to the internet?</Typography>
       </CardContent>
