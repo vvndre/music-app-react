@@ -6,11 +6,9 @@ import Box from "@mui/material/Box";
 import Slider from "@mui/material/Slider";
 import Typography from "@mui/material/Typography";
 
-function MasterVolumeCard() {
-  const [volume, setVolume] = useState(20); // State to track volume
-
-  const handleSliderChange = (event, newValue) => {
-    setVolume(newValue); // Update the volume state when slider value changes
+function MasterVolumeCard({ volume, setVolume }) {
+  const handleVolumeChange = (event, newValue) => {
+    setVolume(newValue);
   };
 
   return (
@@ -28,7 +26,7 @@ function MasterVolumeCard() {
           <Slider
             aria-label="Volume"
             value={volume} // Reflect the volume state
-            onChange={handleSliderChange}
+            onChange={handleVolumeChange}
             valueLabelDisplay="auto"
             step={10}
             marks

@@ -9,10 +9,8 @@ import MenuItem from "@mui/material/MenuItem";
 import FormControl from "@mui/material/FormControl";
 import Select from "@mui/material/Select";
 
-function SoundQualityCard() {
-  const [quality, setQuality] = React.useState(2);
-
-  const handleChange = (event) => {
+function SoundQualityCard({ quality, setQuality }) {
+  const handleQualityChange = (event) => {
     setQuality(event.target.value);
   };
 
@@ -23,7 +21,7 @@ function SoundQualityCard() {
           Sound Quality
         </Typography>
         <br></br>
-        <Typography variant="body2">Manually control audio quality</Typography>
+        <Typography variant="body2">Manually control audio quality </Typography>
         <Typography variant="body2">in event of poor connection</Typography>
       </CardContent>
       <CardActions>
@@ -35,7 +33,7 @@ function SoundQualityCard() {
               id="demo-select-small"
               value={quality}
               label="Quality"
-              onChange={handleChange}
+              onChange={handleQualityChange}
               sx={{ fontSize: "0.75rem" }} // Adjust the font size as needed
             >
               <MenuItem value={1}>Low</MenuItem>

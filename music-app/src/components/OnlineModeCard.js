@@ -7,8 +7,8 @@ import Typography from "@mui/material/Typography";
 function OnlineModeCard() {
   const [online, setOnline] = useState(false); // State to track online status
 
-  const handleSwitchChange = () => {
-    setOnline(!online); // Toggle the online status
+  const handleOnlineToggle = () => {
+    setOnline((prevOnline) => !prevOnline);
   };
 
   return (
@@ -22,7 +22,7 @@ function OnlineModeCard() {
         <Typography variant="body2">to the internet?</Typography>
       </CardContent>
       <div>
-        <Switch checked={online} onChange={handleSwitchChange} />
+        <Switch checked={online} onChange={handleOnlineToggle} />
       </div>
     </Card>
   );
